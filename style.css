@@ -346,12 +346,11 @@ h2 {
 
 
   /* ヒーロー画像 */
-  .hero-image img {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    border-radius: 6px;
-  }
+ .hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
 
 
   /* 各セクション */
