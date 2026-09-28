@@ -308,6 +308,11 @@ h2 {
     letter-spacing: -0.02em;
   }
 
+  .hero h1 span {
+  display: block;
+  white-space: nowrap;
+}
+
   .hero-text p {
     font-size: 14px;
     line-height: 1.8;
