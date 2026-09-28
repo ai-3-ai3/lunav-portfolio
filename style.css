@@ -313,12 +313,13 @@ h2 {
   white-space: nowrap;
 }
 
-  .hero-text p {
+.hero-text p {
   font-size: 13px;
   line-height: 1.8;
   margin-bottom: 26px;
-  color: #a46f6f;
+ color: #8f6666;
 }
+
 
 
   /* HTML / CSSなどの丸をスマホではタグ風に */
