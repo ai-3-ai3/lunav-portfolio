@@ -314,10 +314,11 @@ h2 {
 }
 
   .hero-text p {
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 26px;
-  }
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 26px;
+  color: #6f6661;
+}
 
 
   /* HTML / CSSなどの丸をスマホではタグ風に */
