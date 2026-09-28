@@ -317,20 +317,27 @@ h2 {
 
   /* HTML / CSSなどの丸をスマホではタグ風に */
   .skill-icons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-bottom: 4px;
-  }
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  justify-items: center;
+}
 
-  .skill-icons div {
-    width: auto;
-    height: auto;
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-size: 11px;
-    line-height: 1.4;
-  }
+.skill-icons div {
+  width: 58px;
+  height: 58px;
+  border: 1px solid #d8aaa8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 9px;
+  line-height: 1.2;
+  color: #a46f6f;
+  background: rgba(255,255,255,0.55);
+  padding: 0;
+}
 
 
   /* ヒーロー画像 */
