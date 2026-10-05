@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Sans JP", sans-serif;
   color: #3a3330;
@@ -51,7 +55,6 @@ h2 {
   line-height: 1;
 }
 
-/* lunav 読み方 */
 .logo-reading {
   display: block;
   font-size: 8px;
@@ -62,7 +65,6 @@ h2 {
   margin-top: 4px;
 }
 
-/* WEB DESIGN / CODING */
 .logo-sub {
   display: block;
   font-size: 9px;
@@ -335,6 +337,57 @@ h2 {
 }
 
 
+/* ================= TOP BUTTON ================= */
+
+.top-btn {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+
+  width: 46px;
+  height: 46px;
+
+  border: 1px solid #c98f8f;
+  border-radius: 50%;
+
+  background: rgba(255, 250, 247, 0.92);
+  color: #9b6767;
+
+  font-size: 20px;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.3s,
+    visibility 0.3s,
+    transform 0.3s,
+    background 0.3s,
+    color 0.3s;
+
+  z-index: 1000;
+}
+
+.top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.top-btn:hover {
+  background: #c98f8f;
+  color: #fff;
+}
+
+
 /* =================================================
    SMARTPHONE
 ================================================= */
@@ -523,4 +576,18 @@ h2 {
   .contact-btn {
     margin-top: 24px;
   }
+
+
+  /* ---------- TOP BUTTON ---------- */
+
+  .top-btn {
+    width: 42px;
+    height: 42px;
+
+    right: 16px;
+    bottom: 16px;
+
+    font-size: 18px;
+  }
+
 }
