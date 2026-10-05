@@ -21,6 +21,9 @@ a {
   text-decoration: none;
 }
 
+
+/* ================= HEADER ================= */
+
 .header {
   height: 86px;
   padding: 0 7%;
@@ -30,6 +33,12 @@ a {
   background: #fffaf7;
 }
 
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .logo span,
 h1,
 h2 {
@@ -37,15 +46,31 @@ h2 {
 }
 
 .logo span {
-  font-size: 28px;
+  font-size: 30px;
   font-style: italic;
+  line-height: 1;
 }
 
-.logo small {
+/* lunav 読み方 */
+.logo-reading {
   display: block;
-  font-size: 11px;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: #a98b84;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+/* WEB DESIGN / CODING */
+.logo-sub {
+  display: block;
+  font-size: 9px;
+  font-weight: 400;
   letter-spacing: 0.18em;
-  margin-top: -8px;
+  line-height: 1;
+  margin-top: 6px;
+  color: #3a3330;
 }
 
 .nav {
@@ -74,6 +99,9 @@ h2 {
   width: 100%;
 }
 
+
+/* ================= HERO ================= */
+
 .hero {
   min-height: 560px;
   padding: 70px 7%;
@@ -81,7 +109,11 @@ h2 {
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 48px;
-  background: linear-gradient(90deg, #fffaf7 0%, #f8eee9 100%);
+  background: linear-gradient(
+    90deg,
+    #fffaf7 0%,
+    #f8eee9 100%
+  );
 }
 
 .hero h1 {
@@ -89,6 +121,10 @@ h2 {
   line-height: 1.2;
   font-weight: 600;
   margin-bottom: 28px;
+}
+
+.hero h1 span {
+  display: block;
 }
 
 .hero-text p {
@@ -101,6 +137,9 @@ h2 {
 .work-card img {
   border-radius: 4px;
 }
+
+
+/* ================= HERO SKILLS ================= */
 
 .skill-icons {
   display: flex;
@@ -118,8 +157,11 @@ h2 {
   text-align: center;
   font-size: 12px;
   color: #a46f6f;
-  background: rgba(255,255,255,0.55);
+  background: rgba(255, 255, 255, 0.55);
 }
+
+
+/* ================= COMMON ================= */
 
 .section {
   padding: 82px 7%;
@@ -139,19 +181,27 @@ h2 {
   margin-bottom: 44px;
 }
 
+
+/* ================= WORKS ================= */
+
 .works-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 34px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 42px;
+  row-gap: 64px;
   text-align: left;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .work-card {
   background: #fff;
+  min-width: 0;
 }
 
 .work-card img {
-  aspect-ratio: 4 / 3;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   margin-bottom: 20px;
 }
@@ -159,6 +209,10 @@ h2 {
 .work-card img.work-siding {
   object-fit: contain;
   background: #111;
+}
+
+.work-card img.work-sui {
+  object-fit: cover;
 }
 
 .work-card h3 {
@@ -196,6 +250,9 @@ h2 {
   color: #fff;
 }
 
+
+/* ================= ABOUT ================= */
+
 .about {
   padding: 82px 7%;
   display: grid;
@@ -208,6 +265,9 @@ h2 {
 .about p {
   font-size: 15px;
 }
+
+
+/* ================= SKILLS ================= */
 
 .skills-grid {
   display: grid;
@@ -239,6 +299,9 @@ h2 {
   font-size: 13px;
 }
 
+
+/* ================= CONTACT ================= */
+
 .contact {
   padding: 76px 7%;
   background: #f6dfdc;
@@ -260,6 +323,9 @@ h2 {
   background: #fffaf7;
 }
 
+
+/* ================= FOOTER ================= */
+
 .footer {
   padding: 18px;
   text-align: center;
@@ -268,11 +334,15 @@ h2 {
   font-size: 12px;
 }
 
-/* スマホ */
-/* ================= スマホ ================= */
+
+/* =================================================
+   SMARTPHONE
+================================================= */
+
 @media (max-width: 768px) {
 
-  /* ヘッダー */
+  /* ---------- HEADER ---------- */
+
   .header {
     height: 68px;
     padding: 0 6%;
@@ -283,17 +353,24 @@ h2 {
   }
 
   .logo span {
-    font-size: 23px;
+    font-size: 24px;
   }
 
-  .logo small {
-    font-size: 9px;
-    letter-spacing: 0.16em;
-    margin-top: -6px;
+  .logo-reading {
+    font-size: 7px;
+    letter-spacing: 0.18em;
+    margin-top: 3px;
+  }
+
+  .logo-sub {
+    font-size: 7px;
+    letter-spacing: 0.14em;
+    margin-top: 4px;
   }
 
 
-  /* ヒーロー */
+  /* ---------- HERO ---------- */
+
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
@@ -302,60 +379,62 @@ h2 {
   }
 
   .hero h1 {
-  font-size: clamp(23px, 6.5vw, 28px);
-  line-height: 1.4;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
-}
+    font-size: clamp(23px, 6.5vw, 28px);
+    line-height: 1.4;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
 
-.hero h1 span {
-  display: block;
-  white-space: nowrap;
-}
+  .hero h1 span {
+    display: block;
+    white-space: nowrap;
+  }
 
-.hero-text p {
-  font-size: 13px;
-  line-height: 1.8;
-  margin-bottom: 26px;
- color: #8f6666;
-}
+  .hero-text p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 26px;
+    color: #8f6666;
+  }
 
 
+  /* ---------- HERO SKILLS ---------- */
 
-  /* HTML / CSSなどの丸をスマホではタグ風に */
   .skill-icons {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-  justify-items: center;
-}
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    justify-items: center;
+  }
 
-.skill-icons div {
-  width: 58px;
-  height: 58px;
-  border: 1px solid #d8aaa8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 9px;
-  line-height: 1.2;
-  color: #a46f6f;
-  background: rgba(255,255,255,0.55);
-  padding: 0;
-}
-
-
-  /* ヒーロー画像 */
- .hero-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
+  .skill-icons div {
+    width: 58px;
+    height: 58px;
+    border: 1px solid #d8aaa8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 9px;
+    line-height: 1.2;
+    color: #a46f6f;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 0;
+  }
 
 
-  /* 各セクション */
+  /* ---------- HERO IMAGE ---------- */
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+
+  /* ---------- COMMON ---------- */
+
   .section,
   .about {
     padding: 56px 6%;
@@ -370,10 +449,13 @@ h2 {
   }
 
 
-  /* WORKS */
+  /* ---------- WORKS ---------- */
+
   .works-grid {
     grid-template-columns: 1fr;
-    gap: 42px;
+    gap: 46px;
+    max-width: none;
+    margin: 0;
   }
 
   .work-card {
@@ -382,9 +464,17 @@ h2 {
 
   .work-card img {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     margin-bottom: 16px;
+  }
+
+  .work-card img.work-sui {
+    object-fit: cover;
+  }
+
+  .work-card img.work-siding {
+    object-fit: contain;
   }
 
   .work-card h3 {
@@ -396,7 +486,8 @@ h2 {
   }
 
 
-  /* ABOUT */
+  /* ---------- ABOUT ---------- */
+
   .about {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -412,7 +503,8 @@ h2 {
   }
 
 
-  /* SKILLS */
+  /* ---------- SKILLS ---------- */
+
   .skills-grid {
     grid-template-columns: 1fr;
     gap: 26px;
@@ -420,7 +512,8 @@ h2 {
   }
 
 
-  /* CONTACT */
+  /* ---------- CONTACT ---------- */
+
   .contact {
     display: block;
     text-align: left;
